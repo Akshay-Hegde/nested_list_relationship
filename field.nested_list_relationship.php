@@ -83,11 +83,14 @@ class Field_Nested_list_relationship
 			);
 		}
 
-		// Build the cool value.
-		$input = '*'.implode('*', $_POST['tree-item']).'*';
+		// probably legacy stuff?
+		/*
+			// Build the cool value.
+			$input = '*'.implode('*', $_POST['tree-item']).'*';
 
-		// Save it manually cause alt fucks shit up
-		$this->CI->db->update($stream->stream_prefix.$stream->stream_slug, array($field->field_slug => $input), array('id' => $id));
+			// Save it manually cause alt fucks shit up
+			$this->CI->db->update($table_name, array($field->field_slug => $input), array($stream->stream_slug.'_id' => $id));
+		*/
 	}
 
 	// --------------------------------------------------------------------------
